@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>여의도 홈 레이더</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="radar" aria-hidden="true"></div>
+        <div>
+          <h1>여의도 홈 레이더</h1>
+          <p class="lede">청약홈 분양, LH 임대·분양 공고, 여의도 실거래를 매일 공공 API로 모읍니다.</p>
+          <p class="meta" id="updated">수집 시각을 확인하는 중…</p>
+        </div>
+      </header>
+
+      <section class="kpis">
+        <article class="kpi"><span>여의도 매매</span><strong id="kpi-trade">-</strong><em>실거래 건</em></article>
+        <article class="kpi"><span>여의도 전월세</span><strong id="kpi-rent">-</strong><em>실거래 건</em></article>
+        <article class="kpi"><span>청약 공고</span><strong id="kpi-apply">-</strong><em>서울·영등포 우선</em></article>
+        <article class="kpi"><span>LH 공고</span><strong id="kpi-lh">-</strong><em>서울 지역</em></article>
+      </section>
+
+      <nav class="tabs">
+        <button data-tab="trades" class="active">매매 실거래</button>
+        <button data-tab="rents">전월세</button>
+        <button data-tab="cheongyak">청약홈</button>
+        <button data-tab="lh">LH 공고</button>
+      </nav>
+
+      <section class="panel" id="table-mount">
+        <div class="empty">데이터를 불러오는 중…</div>
+      </section>
+
+      <footer>
+        출처: 한국부동산원 청약홈 분양정보, 한국토지주택공사 분양임대공고문, 서울 열린데이터광장 부동산 실거래.
+        인증키는 저장소 Secrets에만 두고 화면에는 수집 결과만 표시합니다.
+      </footer>
+    </main>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
